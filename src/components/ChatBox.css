@@ -1,0 +1,179 @@
+body {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  height: 0;
+}
+
+.chat-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 25px;
+  background: #1e1e1e;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.messages {
+  max-height: 350px;
+  overflow-y: auto;
+  background: #222;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.messages {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.message {
+  display: flex;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.message-bubble {
+  padding: 12px;
+  border-radius: 12px;
+  max-width: 75%;
+  word-wrap: break-word;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.self {
+  justify-content: flex-end;
+}
+
+.self .message-bubble {
+  background: #0084ff;
+  color: white;
+  text-align: right;
+  border-bottom-right-radius: 0;
+}
+
+.other {
+  justify-content: flex-start;
+}
+
+.other .message-bubble {
+  background: #444;
+  color: white;
+  text-align: left;
+  border-bottom-left-radius: 0;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+}
+
+.input-area input {
+  flex-grow: 1;
+  padding: 12px;
+  border: 2px solid #444;
+  background: #2a2a2a;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-area input:focus {
+  border-color: #ff6b6b;
+  box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+  outline: none;
+}
+
+.input-area button {
+  background: #0084ff;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.input-area button:hover {
+  background: #005bb5;
+  transform: translateY(-2px);
+}
+
+.RoomId {
+  width: fit-content;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  color: white;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.copy-icon {
+  cursor: pointer;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.copy-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0084ff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: opacity 0.5s ease;
+}
+
+.emoji-btn {
+  background: transparent;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+.emoji-picker {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  z-index: 100;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

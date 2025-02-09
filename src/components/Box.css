@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 450px;
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  margin: 80px auto;
+  text-align: center;
+  color: white;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #444;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #2a2a2a;
+  color: white;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  border-color: #ff6b6b;
+  box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+  outline: none;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.toggle-btn:hover {
+  background-color: #ff4c4c;
+  transform: translateY(-2px);
+}
+
+.toggle-btn:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+.section {
+  width: 100%;
+  padding: 20px;
+  border-top: 2px solid #444;
+  margin-top: 15px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+.info {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+      width: 90%;
+      padding: 20px;
+  }
+
+  .toggle-btn,
+  .submit-btn,
+  input {
+      width: 100%;
+  }
+}
+
+.loader {
+  width: fit-content;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 30px;
+  padding-bottom: 8px;
+  background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
+  animation: l2 2s linear infinite;
+}
+.loader:before {
+  content: "Connecting to room...";
+}
+@keyframes l2 {
+  to {
+    background-size: 100% 3px;
+  }
+}
